@@ -1,0 +1,58 @@
+.mainPf {
+  background-color: map-get($colores, secundario);
+  min-height: 90vh;
+  color: map-get($colores, fuenteC);
+  padding: 20px;
+
+  .imgPF {
+    width: 100%;
+    display: flex;
+    @include displayflex(column, center, center, center, nowrap);
+    img {
+      width: 250px;
+      height: auto;
+      margin-bottom: 20px;
+    }
+  }
+
+  .preguntas {
+    display: flex;
+    @include displayflex(column, flex-start, center, center, wrap);
+    margin: 10px 20px;
+
+    h2 {
+      margin-bottom: 20px;
+      font-size: 2rem;
+    }
+    h4 {
+      margin-bottom: 15px;
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+    p {
+      margin-bottom: 15px;
+      font-size: 1.2rem;
+      font-weight: 100;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .mainPf {
+    height: 89vh;
+    .preguntas {
+      h2 {
+        margin-bottom: 20px;
+        font-size: 1.5rem;
+      }
+      h4 {
+        margin-bottom: 15px;
+        font-size: 1.2rem;
+      }
+      p {
+        margin-bottom: 15px;
+        font-size: 1rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,55 @@
+.mainMedios {
+  background-color: map-get($colores, secundario);
+  height: 90vh;
+  color: map-get($colores, fuenteC);
+  padding: 20px;
+
+  .tituloMedios {
+    text-align: center;
+  }
+  .medios-pagos-content {
+    display: flex;
+    @include displayflex(row, flex-start, center, center, nowrap);
+
+    .select {
+      width: 90%;
+      margin-bottom: 20px;
+      .form-select {
+        width: 50%;
+        margin-bottom: 20px;
+      }
+    }
+    .pagos {
+      width: 50%;
+      margin-bottom: 20px;
+      img {
+        width: 80%;
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  .mainMedios {
+    height: 89vh;
+    .medios-pagos-content {
+      display: flex;
+      @include displayflex(column, flex-start, center, flex-start, nowrap);
+
+      .select {
+        width: 100%;
+
+        .form-select {
+          width: 100%;
+        }
+      }
+      .pagos {
+        width: 80%;
+        margin: 0 auto;
+        img {
+          width: 100%;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+}

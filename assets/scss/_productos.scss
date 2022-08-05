@@ -1,0 +1,49 @@
+.mainProd {
+  background-color: map-get($colores, secundario);
+  color: map-get($colores, fuenteC);
+  padding: 20px;
+
+  .catalogo {
+    display: flex;
+    @include displayflex(row, center, center, space-around, wrap);
+
+    .card {
+      display: flex;
+      background-color: rgb(83, 78, 78);
+      height: 400px;
+      margin: 5px;
+      flex-direction: column;
+      align-items: center;
+
+      .cardTitulo {
+        display: flex;
+        color: map-get($colores, fuente);
+        text-align: center;
+        padding-top: 8px;
+      }
+      .cardImg {
+        width: 350px;
+
+        border-radius: 10px;
+        margin: 5px;
+      }
+      .cardBtn {
+        color: map-get($colores, fuenteC);
+        border: none;
+        margin: 0 auto;
+        margin-bottom: 4px;
+        width: 120px;
+        height: 37px;
+        border-radius: 8px;
+      }
+    }
+  }
+}
+@media (max-width: 576px) {
+  .cardImg {
+    width: 250px;
+
+    border-radius: 10px;
+    margin: 5px;
+  }
+}

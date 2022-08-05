@@ -1,0 +1,22 @@
+.mainContacto {
+  background-color: map-get($colores, secundario);
+  color: map-get($colores, fuenteC);
+  padding: 20px;
+  height: 90vh;
+  .mainNav {
+    display: flex;
+    @include displayflex(column, center, center, center, nowrap);
+    li {
+      list-style: none;
+    }
+    iframe {
+      width: 80%;
+    }
+  }
+  .form {
+    width: 50%;
+    display: flex;
+    @include displayflex(column, center, center, center, nowrap);
+    margin: 0 auto;
+  }
+}
